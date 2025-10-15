@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio of Mahnaz Mohammad Karimi — Robotics Engineer" />
+  <title>Mahnaz Mohammad Karimi — Robotics Engineer & Product Designer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+  :root{
+    --bg:#0f1724;
+    --card: rgba(255,255,255,0.04);
+    --accent1: #8b5cf6;
+    --accent2: #06b6d4;
+    --text: #e6eef8;
+    --muted: #a8b3c9;
+    --glass: rgba(255,255,255,0.06);
+    --maxw: 1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:"Inter",sans-serif;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(139,92,246,0.12), transparent 8%),
+                radial-gradient(900px 400px at 90% 90%, rgba(6,182,212,0.08), transparent 6%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:28px;}
+  header{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);}
+  .logo{
+    width:44px;height:44px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent1),var(--accent2));
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:18px;
+  }
+  nav{display:flex;gap:18px;}
+  nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;border-radius:8px;font-size:15px;
+  }
+  nav a.cta{
+    background:linear-gradient(90deg,var(--accent1),var(--accent2));
+    color:white;
+  }
+
+  /* hero */
+  .hero{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:32px;
+    align-items:center;
+    padding:50px 0;
+  }
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;padding:28px 0;}
+    nav{display:none;}
+  }
+  .hero-left h1{margin:0;font-size:34px;letter-spacing:-0.02em;}
+  .lead{color:var(--muted);margin-top:14px;max-width:640px;}
+  .cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    padding:12px 18px;border-radius:12px;font-weight:700;border:0;cursor:pointer;
+    background:transparent;color:var(--text);
+  }
+  .btn.primary{
+    background:linear-gradient(90deg,var(--accent1),var(--accent2));
+    color:white;
+  }
+
+  .profile-card{
+    background:var(--glass);
+    border-radius:16px;
+    padding:22px;
+    border:1px solid rgba(255,255,255,0.03);
+  }
+  .avatar{
+    width:100%;height:260px;border-radius:12px;
+    background:rgba(255,255,255,0.05);
+    display:flex;align-items:center;justify-content:center;
+    color:white;font-weight:800;font-size:40px;
+  }
+
+  /* sections */
+  .section{padding:36px 0;border-top:1px solid rgba(255,255,255,0.03);}
+  h2.section-title{margin:0 0 18px 0;font-size:22px;}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:900px){.grid{grid-template-columns:1fr;}}
+
+  .project{
+    background:var(--card);
+    padding:18px;border-radius:12px;
+    border:1px solid rgba(255,255,255,0.03);
+    transition:transform .3s ease;
+  }
+  .project:hover{transform:translateY(-5px);}
+  .thumb{
+    height:140px;background:rgba(255,255,255,0.04);
+    border-radius:10px;margin-bottom:10px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted);
+  }
+  .project h3{margin:0 0 8px 0;}
+  .project p{margin:0;color:var(--muted);font-size:14px;}
+
+  .two-col{display:grid;grid-template-columns:2fr 1fr;gap:20px;}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr;}}
+
+  form input,form textarea{
+    width:100%;padding:10px;border-radius:10px;
+    border:1px solid rgba(255,255,255,0.03);
+    background:transparent;color:var(--text);margin-bottom:10px;
+  }
+
+  footer{margin-top:40px;padding:28px 0;color:var(--muted);font-size:13px;text-align:center;}
+  .chip{display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;background:rgba(255,255,255,0.03);color:var(--muted);}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">MMK</div>
+        <div>
+          <div style="font-weight:700">Mahnaz Mohammad Karimi</div>
+          <div style="font-size:12px;color:var(--muted)">Robotics Engineer • 3D Designer • Mechanical Engineer</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="chip">Robotics • AI • Mechanical Design</div>
+          <h1>Hello — I'm <span style="background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent;">Mahnaz Mohammad Karimi</span></h1>
+          <p class="lead">
+            Robotics Engineer and Product Designer passionate about intelligent machines, emotional robotics, and innovative mechanical systems.
+            Focused on merging mechanical design, AI, and control systems to build the future of humanoid robots.
+            <br>
+            <br>
+            <strong>
+              A strong and creative design, combined with the skills and knowledge of robotics engineers and mechanical engineers, can be the surest step towards having optimal and extraordinary robots.
+            </strong>
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Get in Touch</a>
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="Resume.pdf" download>Download Resume (PDF)</a>
+          </div>
+        </div>
+        <aside class="profile-card">
+        <div class="avatar">
+          <img src="assets/me.jpg" alt="Mahnaz Mohammad Karimi" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        </div>
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Mahnaz Mohannad Karimi (Alfa)</div>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px;">
+              Genoa, Italy · <a href="mailto:Mahnazmohammadkarimi@gmail.com" style="color:var(--accent2);text-decoration:none;">Email Me</a>
+            </div>
+            <p style="margin-top:10px;color:var(--muted);font-size:14px;">
+              Enthusiastic about product design, robotics, artificial intelligence and 3D modeling by engineering tools.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid">
+          <article class="project">
+            <div class="avatar">
+              <img src="assets/ARIAMA.PNG" alt="ARIAMA" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3>Robotic Arm “ARIAMA”</h3>
+            <p>Design and implementation of a robotic arm for educational and industrial applications. ARIAMA was one of my first robots which was created on uno board arduino.</p>
+          </article>
+
+          <article class="project">
+            <div class="avatar">
+              <img src="assets/Drawing1_Cutter_Ver_2_Base.jpg" alt="Metal cutting machine" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3>Industrial metal Cutting Machine</h3>
+            <p>Led mechanical design of an industrial 2Dof metal bar cutting machine from concept to delivery. This machine automatically guides the metal bars in and on one side makes perfectly even cuts on them and on the other side it cuts them into pieces and delivers these pieces to us from the output side. These pieces were part of the automotive parts that the company had requested. </p>
+          </article>
+
+          <article class="project">
+            <div class="avatar">
+              <img src="assets/creo 3d.png" alt="Robotic work design by creo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3>Creo 3D modeling Lego Robotic Design</h3>
+            <p>This 3D robot model was made for the presentation of the University with Creo 3D tool.</p>
+          </article>
+
+          <article class="project">
+            <div class="avatar">
+              <img src="assets/creo 2dd.jpg" alt="Robotic work design by creo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3>2D Drawing results</h3>
+            <p>The sample of 2D Drawing parts. These parts were ready for industrial manufacturing and assembly.</p>
+          </article>
+
+          <article class="project">
+            <div class="avatar">
+              <img src="Intelligent robot" alt="DIACO" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3>Learn more about "DIACO" the intelligent robot</h3>
+            <p>The field of work of this robot is based on human emotions and their understanding.<br> This intelligent robot is being trained.<br> To collaborate in this field or to receive more information, please send me an email with the title "DIACO".<br> Thank you!</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="two-col">
+          <div>
+            <p style="color:var(--muted);">
+              I am a Robotics Engineer with a strong background in mechanical design.
+              My Bachelor's degree in Mechanical Engineering provided me with a solid foundation in engineering principles, while my ongoing Master's studies in Robotics Engineering are enhancing my expertise in robotics, AI, and control systems.
+              I have hands on experience in designing and prototyping mechanical systems, and I am proficient in various CAD software tools such as CATIA, SolidWorks and Creo.
+              I am passionate about creating intelligent machines that can interact with humans in meaningful ways. 
+              My master's research focuses on training and humanization of emotions and perception for robots.
+            </p>
+
+            <h3>Education</h3>
+            <p class="chip">M.Sc. Robotics Engineering – University of Genoa (2023–2025)</p>
+            <p class="chip">B.Sc. Mechanical Engineering – Arak University of Technology (2019–2022)</p>
+
+            <h3 style="margin-top:18px;">Technical Skills</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+              <span class="chip">CATIA</span>
+              <span class="chip">AutoCAD</span>
+              <span class="chip">SolidWorks</span>
+              <span class="chip">Creo</span>
+              <span class="chip">Deep Learning</span>
+            </div>
+            <p style="color:var(--muted);">MATLAB · Simulink · Python · 3D/2D Design · Rapid Prototyping · Leadership · Team Collaboration · Problem Solving</p>
+
+<h3 style="margin-top:18px;">Languages</h3>
+
+<div class="lang-skill">
+  <div class="lang-item">
+    <span>English</span>
+    <div class="bar"><div class="fill" style="width:90%;"></div></div>
+  </div>
+
+  <div class="lang-item">
+    <span>Italian</span>
+    <div class="bar"><div class="fill" style="width:50%;"></div></div>
+  </div>
+
+  <div class="lang-item">
+    <span>Persian</span>
+    <div class="bar"><div class="fill" style="width:100%;"></div></div>
+  </div>
+
+  <div class="lang-item">
+    <span>Japanese</span>
+    <div class="bar"><div class="fill" style="width:20%;"></div></div>
+  </div>
+
+  <div class="lang-item">
+    <span>German</span>
+    <div class="bar"><div class="fill" style="width:10%;"></div></div>
+  </div>
+</div>
+
+<style>
+.lang-skill{margin-top:10px;}
+.lang-item{margin-bottom:10px;}
+.lang-item span{display:block;font-weight:600;margin-bottom:4px;color:var(--text);}
+.bar{
+  width:100%;height:8px;
+  background:rgba(255,255,255,0.1);
+  border-radius:6px;
+  overflow:hidden;
+}
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  border-radius:6px;
+  transition:width 0.6s ease-in-out;
+}
+</style>
+          </div>
+
+<!-- Contact Section -->
+<section id="contact" class="section" style="padding:60px 0;">
+  <div style="
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.4);
+      max-width:800px;
+      margin:0 auto;
+      backdrop-filter:blur(12px);
+  ">
+    <h2 style="margin-top:0;">Contact Me</h2>
+    <p style="color:var(--muted);max-width:600px;margin-bottom:20px;">
+      Feel free to get in touch for collaborations, research or if you have any questions!
+    </p>
+
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
+      <p id="note" style="display:none;color:var(--muted);font-size:13px;margin-top:6px;">Your message is ready to send!</p>
+    </form>
+
+    <div style="margin-top:20px;">
+      <p style="color:var(--muted);font-size:14px;">📧 <a href="mailto:Mahnazmohammadkarimi@gmail.com" style="color:var(--accent2);text-decoration:none;">Mahnazmohammadkarimi@gmail.com</a></p>
+      <p style="color:var(--muted);font-size:14px;">🔗 <a href="https://www.linkedin.com/in/mahnaz-m-karimi-b56a58210/" style="color:var(--accent2);text-decoration:none;">LinkedIn Profile</a></p>
+      <p style="color:var(--muted);font-size:14px;">📸 <a href="https://www.instagram.com/reallwii/#" style="color:var(--accent2);text-decoration:none;">Instagram Profile</a></p>
+    </div>
+  </div>
+</section>
+
+
+      <footer>
+        © <span id="year"></span> Mahnaz Mohammad Karimi — All Rights Reserved.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function sendMessage(e){
+    e.preventDefault();
+    const name=document.getElementById("name").value;
+    const email=document.getElementById("email").value;
+    const message=document.getElementById("message").value;
+    const subject=encodeURIComponent("Website Contact — "+name);
+    const body=encodeURIComponent(message+"\n\nFrom: "+name+" ("+email+")");
+    window.location.href=`mailto:Mahnazmohammadkarimi@gmail.com?subject=${subject}&body=${body}`;
+    document.getElementById("note").style.display="block";
+  }
+  </script>
+</body>
+</html>

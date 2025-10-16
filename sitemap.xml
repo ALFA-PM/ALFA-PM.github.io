@@ -7,16 +7,5 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://mahnazmohammadkarimi.com/projects.html</loc>
-    <lastmod>2025-10-14</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mahnazmohammadkarimi.com/contact.html</loc>
-    <lastmod>2025-10-14</lastmod>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>
+
